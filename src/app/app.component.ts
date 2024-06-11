@@ -1,7 +1,5 @@
-import { HttpClientModule } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { RouterOutlet } from '@angular/router';
+import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +9,14 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'node-front';
+  title = 'Reservation';
+  showNavBar: boolean = false;
+
+  constructor(private router: Router) {
+    this.router.events.subscribe((event) => {
+       if (event instanceof NavigationEnd) {
+        this.showNavBar = !['/login', '/register'].includes(event.urlAfterRedirects);
+       }
+    })
+  }
 }

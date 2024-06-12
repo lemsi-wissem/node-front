@@ -1,25 +1,2 @@
-<div class="mb-3">
-    <p-card header="Liste des reservation">
-        <p-table 
-            [value]="reservations" 
-            styleClass="p-datatable-striped" 
-            [tableStyle]="{'min-width': '50rem'}">
-            <ng-template pTemplate="header">
-                <tr>
-                    <th>Salle</th>
-                    <th>Date début</th>
-                    <th>Date fin</th>
-                    <th></th>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-reservation>
-                <tr>
-                    <td>{{reservation.room.name}}</td>
-                    <td>{{reservation.start}}</td>
-                    <td>{{reservation.end}}</td>
-                   
-                </tr>
-            </ng-template>
-        </p-table>
-    </p-card>
-</div>
+<app-calendar></app-calendar>
+

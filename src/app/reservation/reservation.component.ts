@@ -10,11 +10,12 @@ import { FormsModule } from '@angular/forms';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
 import { ReservationService } from '../service/reservation.service';
+import { CalendarComponent } from '../calendar/calendar.component';
 @Component({
   selector: 'app-reservation',
   standalone: true,
   imports: [CardModule, TableModule, FormsModule, ToastModule,
-    ButtonModule, TagModule, DialogModule, CalendarModule],
+    ButtonModule, TagModule, DialogModule, CalendarModule, CalendarComponent],
   templateUrl: './reservation.component.html',
   styleUrl: './reservation.component.scss'
 })

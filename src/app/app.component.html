@@ -25,7 +25,7 @@
             <div class="flex space-x-4">
               <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
               <a [routerLink]="['/reservation']" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white" [ngClass]="{'bg-gray-900': path == '/reservation'}">Mes réservations</a>
-              <a [routerLink]="['/room-list']" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:text-white hover:bg-gray-700" aria-current="page" [ngClass]="{'bg-gray-900 ': path == '/room-list'}">Réserver</a>
+              <a [routerLink]="['/room-list']" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700" aria-current="page" [ngClass]="{'bg-gray-900 text-white': path == '/room-list'}">Réserver</a>
             </div>
           </div>
         </div>

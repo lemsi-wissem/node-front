@@ -12,4 +12,5 @@ export class RoomService {
   getRooms() : Observable<any> {
     return this.httpClient.get<any>('http://localhost:9003/rooms');
   }
+
 }
